@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       userName: '',
       startReview: false,
-      data: []
+      data: [], 
+      cardCount: 0
     }
   }
 
@@ -39,6 +40,17 @@ class App extends Component {
       startReview: true
     })
   };
+
+  updateCard = () => {
+    let count = 0; 
+    if (this.state.cardCount < 29 ) {
+      count++ 
+    } 
+    this.setState({
+      cardCount: count
+    })
+  }
+
   
 
   render = () => {
@@ -62,9 +74,9 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <article className="count-container">
-            <h3 className="card-count">0/30 Cards Answered</h3>
+            <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3>
           </article>
-          <CardContainer data={this.state.data}/>
+          <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard}/>
         </div>
       );
     }

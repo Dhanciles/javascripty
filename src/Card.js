@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import './Card.scss';
 
 class Card extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   takeAnswer = (event) => {
     event.preventDefault(); 
     let selectedAnswer = event.target.name; 
     console.log(selectedAnswer)
+    this.props.updateCard()
   } 
 
 
