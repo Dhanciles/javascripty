@@ -8,7 +8,7 @@ class CardContainer extends Component {
   constructor() {
     super(); 
   }
-  
+
   render = () => {
     let flashCards = this.props.data.map(question => {
       return (
