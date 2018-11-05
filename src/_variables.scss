@@ -1,0 +1,20 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Boogaloo|Nunito");
+$text-font: 'Nunito', sans-serif;
+$brand-font: 'Boogaloo', cursive;
+
+
+// Colors
+$primary-color: #00D25D; 
+$secondary-color: #1E5C10;
+$button-hover: #FFA22C; 
+$not-white: #F5FBF8; 
+
+// Mixins
+@mixin display-flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: center;
+}
