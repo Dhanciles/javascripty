@@ -52,7 +52,11 @@ class App extends Component {
     })
   }
 
-  
+  updateLocalStorage = (name, cards) => {
+    localStorage.setItem('name', userName)
+    localStorage.setItem('incorrectly answered cards', cards)
+  }
+
 
   render = () => {
 
