@@ -33,6 +33,7 @@ class App extends Component {
     this.setState({
       userName: event.target.value
     })
+    this.updateLocalStorage(this.state.userName)
   }; 
 
   startSession = event => {
@@ -53,7 +54,7 @@ class App extends Component {
   }
 
   updateLocalStorage = (name, cards) => {
-    localStorage.setItem('name', userName)
+    localStorage.setItem('name', name)
     localStorage.setItem('incorrectly answered cards', cards)
   }
 
