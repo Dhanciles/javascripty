@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     this.getCards() 
   }; 
 
@@ -42,7 +42,7 @@ class App extends Component {
   };
 
   updateCard = () => {
-    let count = 0; 
+    let count = this.state.cardCount; 
     if (this.state.cardCount < 29 ) {
       count++ 
     } 
