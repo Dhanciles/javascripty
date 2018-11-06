@@ -9,7 +9,8 @@ class App extends Component {
       userName: '',
       startReview: false,
       data: [], 
-      cardCount: 0
+      cardCount: 0, 
+      incorrectCards: [] 
     }
   }
 
