@@ -8,8 +8,8 @@ class Card extends Component {
 
   takeAnswer = (event) => {
     event.preventDefault(); 
-    let selectedAnswer = event.target.name; 
-    console.log(selectedAnswer)
+    let selectedAnswer = event.target.name 
+    this.props.checkAnswer(selectedAnswer)
     this.props.updateCard()
   } 
 

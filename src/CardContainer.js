@@ -17,7 +17,7 @@ class CardContainer extends Component {
     let flashCards = this.props.data.map(question => {
       if (this.props.count === question.id) {
         return (
-          <Card updateCard={this.props.updateCard} id={question.id} question={question.question} category={question.category} answers={question.answers}/>
+          <Card updateCard={this.props.updateCard} id={question.id} question={question.question} category={question.category} answers={question.answers} checkAnswer={this.checkAnswer}/>
         )
       }
     })
