@@ -9,6 +9,10 @@ class CardContainer extends Component {
     super(props); 
   }
 
+  checkAnswer = (selection) => {
+    console.log('hi'); 
+  }
+
   render = () => {
     let flashCards = this.props.data.map(question => {
       if (this.props.count === question.id) {
