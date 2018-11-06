@@ -2,15 +2,20 @@ import React, { Component } from "react";
 import Card from './Card.js';
 import './CardContainer.scss';
 
-
-
 class CardContainer extends Component {
   constructor(props) {
     super(props); 
+    this.state = {
+      correctSelections: [], 
+      incorrectSelections: []
+    }
   }
 
   checkAnswer = (selection) => {
     console.log('hi'); 
+    // check if the selection matches data.corectAsnwer
+    // if it does we want to add to our correct answers 
+    // if it doesnt we want to add to our incorrect answers
   }
 
   render = () => {
