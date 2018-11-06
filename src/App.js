@@ -55,7 +55,12 @@ class App extends Component {
 
   updateLocalStorage = (name, cards) => {
     localStorage.setItem('name', name)
-    localStorage.setItem('incorrectly answered cards', cards)
+    localStorage.setItem('incorrect_cards', cards)
+  }
+
+  getIncorrectCards = () => {
+    // let incorrect = 
+    console.log('hi')
   }
 
 
