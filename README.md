@@ -32,6 +32,6 @@ This project was built during my time at Turing School of Software and Design, a
 - Add more data to my dataset, that would allow my user to filter through different concepts and narrow down the flash cards they would like to study. 
 - Recently I discovered how to create a 3d card stack using CSS. During an intermission I plan on adding this to add more depth to the cards, so it really feels like your are moving through a deck of flash cards. 
 
-![Landing Page](src/images/langing-page.png)
+![Landing Page](src/images/landing-page.png)
 
 ![Applaction](src/images/app.png)
