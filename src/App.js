@@ -46,7 +46,6 @@ class App extends Component {
   }
 
   updateLocalStorage = (cards) => {
-
     let userQuestions = JSON.parse(localStorage.getItem('incorrect'))
     if (!userQuestions) {
       userQuestions = []
@@ -60,7 +59,16 @@ class App extends Component {
     this.updateLocalStorage(obj)
   }
 
-  startNewSession = () => {
+  reviewIncorrectCards = (event) => {
+    event.preventDefault()
+    let incorrectSelections = JSON.parse(localStorage.getItem('incorrect'))
+    this.setState({
+      incorrectCards: incorrectSelections
+    })
+  }
+
+  startNewSession = (event) => {
+    event.preventDefault(); 
     this.setState({
       cardCount: 0
     })
