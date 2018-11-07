@@ -46,6 +46,7 @@ class App extends Component {
   }
 
   updateLocalStorage = (cards) => {
+
     let userQuestions = JSON.parse(localStorage.getItem('incorrect'))
     if (!userQuestions) {
       userQuestions = []
@@ -59,6 +60,10 @@ class App extends Component {
     this.updateLocalStorage(obj)
   }
 
+  startNewSession = () => {
+
+  }
+
 
   render = () => {
     if (!this.state.startReview) {
@@ -70,6 +75,18 @@ class App extends Component {
            <button className="start-review-button" onClick={this.startSession}>Start Reviewing</button>
         </div>
       );
+    } else if (this.state.cardCount === 29){
+      return (
+        <div className="App">
+          <header className="app-header">
+            <h1 className="app-title">JAVASCRIPTY</h1>
+          </header>
+          <div className="review-container"> 
+              <button className="incorrect-button">Review Incorrect Answers</button>
+              <button className="new-session-button">Start New Session</button>
+          </div>
+        </div>
+      ); 
     } else {
       return (
         <div className="App">
@@ -77,11 +94,12 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <article className="count-container">
-            <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3>
+            {/* <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3> */}
           </article>
           <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards}/>
         </div>
       );
+
     }
   }; 
 }
