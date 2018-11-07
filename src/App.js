@@ -76,6 +76,7 @@ class App extends Component {
     this.setState({
       cardCount: 0
     })
+    localStorage.clear(); 
   }
 
 
