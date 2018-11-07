@@ -52,10 +52,6 @@ class App extends Component {
     })
   }
 
-  // addToLocalStorage = () => {
-
-  // }
-
   updateLocalStorage = (name, cards) => {
     if (name) {
       localStorage.setItem( 'name', JSON.stringify([]))
@@ -79,10 +75,7 @@ class App extends Component {
           <article className="app-title-container"> 
             <h1 className="app-title">JAVASCRIPTY</h1>
           </article>
-          <form onSubmit={this.startSession}>
-           <input className="user-input" type="text" placeholder="Enter Your Name" onChange={this.handleChange}/>
-           <button className="start-review-button">Start Reviewing</button>
-          </form>
+           <button className="start-review-button" onClick={this.startSession}>Start Reviewing</button>
         </div>
       );
     } else {
