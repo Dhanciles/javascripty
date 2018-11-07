@@ -32,8 +32,7 @@ class App extends Component {
   handleChange = event => {
     this.setState({
       userName: event.target.value
-    })
-    this.updateLocalStorage(this.state.userName)
+    }, () => this.updateLocalStorage(this.state.userName))
   }; 
 
   startSession = event => {
@@ -54,13 +53,17 @@ class App extends Component {
   }
 
   updateLocalStorage = (name, cards) => {
-    localStorage.setItem('name', name)
-    localStorage.setItem('incorrect_cards', cards)
+    console.log('name', name)
+    console.log('cards', cards)
+    if (name) {
+      localStorage.setItem('name', JSON.stringify(name))
+    } else if (cards) {
+      localStorage.setItem('incorrect_cards', JSON.stringify(cards))
+    }
   }
 
-  getIncorrectCards = () => {
-    // let incorrect = 
-    console.log('hi')
+  saveIncorrectCards = (obj) => {
+    this.updateLocalStorage(obj)
   }
 
 
@@ -87,7 +90,7 @@ class App extends Component {
           <article className="count-container">
             <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3>
           </article>
-          <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard}/>
+          <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards}/>
         </div>
       );
     }

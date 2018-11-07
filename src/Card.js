@@ -11,13 +11,21 @@ class Card extends Component {
 
   takeAnswer = (event) => {
     event.preventDefault(); 
+    let { id, question, category, answers, correctAnswer } = this.props
     let selectedAnswer = event.target.name 
+    if (selectedAnswer === correctAnswer) {
+      this.setState({
+        answeredCorrectly: true
+      })
+    } else {
+      this.props.getIncorrectCards({id, question, category, answers, correctAnswer})
+    }
     this.props.updateCard()
   } 
 
 
   render = () =>  {
-    let { id, question, category, answers, correctAnswer } = this.props
+    let { id, question, category, answers } = this.props
     let options = answers.map(answer => {
       return <button name={answer} onClick={this.takeAnswer}>{answer}</button>
     }); 
