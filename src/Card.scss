@@ -35,3 +35,14 @@
     }
   }
 }
+
+.correct-answer-container {
+  border-radius: 20px; 
+  border: 5px solid $secondary-color;
+  width: 75%; 
+  font-family: $text-font; 
+  font-size: 1.5rem; 
+  font-weight: 600; 
+  height: 150px; 
+  margin: 10px;
+}

@@ -10,6 +10,7 @@
   text-align: center;
   background-color: $primary-color; 
   height: 100vh; 
+  overflow: hidden;
 }
 
 button {
@@ -42,12 +43,36 @@ h3 {
  color: $not-white; 
 }
 
-.count-container {
+.reset-review-container {
   display: flex; 
-  justify-content: flex-start;
-  margin-left: 16px;  
-  .card-count {
+  justify-content: center; 
+  margin-bottom: 10px; 
+
+}
+
+.review-container {
+  @include display-flex(column); 
+  margin-right: 100px; 
+  height: 600px;
+  width: 600px; 
+  background-color: $not-white; 
+  border-radius: 20%; 
+  font-family: $text-font; 
+  padding: 8px;
+     p {
     font-family: $text-font; 
-    font-size: 2rem; 
+    font-weight: 600; 
+    font-size: 1.5rem; 
+    color: $secondary-color; 
+  }
+    button {
+    border: 2px $primary-color;
+    background: $secondary-color; 
+    cursor: pointer;
+    &:hover {
+    background-color: $button-hover; 
+    color: $not-white; 
+    }
+
   }
 }

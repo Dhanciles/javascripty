@@ -25,6 +25,18 @@ class Card extends Component {
 
 
   render = () =>  {
+    if (this.props.incorrectReviewSelected) {
+      let {category, question, correctAnswer, id} = this.props; 
+      return (
+        <div key={id} className="flash-card">
+        <h2 className="flash-card-category">{category.toUpperCase()}</h2>
+        <p className="flash-card-question">{question}</p>
+        <div className="correct-answer-container">
+          {correctAnswer}
+        </div>
+      </div>
+      ); 
+    } else {
     let { id, question, category, answers } = this.props
     let options = answers.map(answer => {
       return <button name={answer} onClick={this.takeAnswer}>{answer}</button>
@@ -38,7 +50,9 @@ class Card extends Component {
         </div>
       </div>
     );
+    }
   }
 }
+
 
 export default Card; 

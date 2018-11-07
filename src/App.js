@@ -97,6 +97,7 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <div className="review-container"> 
+              <p className="post-review-text">You Have Completed Your Review!</p>
               <button className="incorrect-button"onClick={this.reviewIncorrectCards}>Review Incorrect Answers</button>
               <button onClick={this.startNewSession} className="new-session-button">Start New Session</button>
           </div>
@@ -108,6 +109,9 @@ class App extends Component {
           <header className="app-header">
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
+          <div className="reset-review-container">
+            <button onClick={this.startNewSession} className="new-session-button">Start New Session</button>
+          </div>
           <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards} incorrectCards={this.state.incorrectCards} selectedIncorrectCards={this.state.selectedIncorrectCards}/>
         </div>
       );

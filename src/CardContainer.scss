@@ -2,14 +2,11 @@
 
 
 .CardContainer {
-  display: flex;  
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
 }
 
-.flash-card-container {
-  display: flex; 
-  flex-direction: row; 
-  flex-wrap: wrap;
-}
 
 
 
