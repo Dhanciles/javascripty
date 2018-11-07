@@ -9,7 +9,8 @@ class App extends Component {
       startReview: false,
       data: [], 
       cardCount: 0, 
-      incorrectCards: [] 
+      incorrectCards: [], 
+      selectedIncorrectCards: false
     }
   }
 
@@ -63,8 +64,11 @@ class App extends Component {
     event.preventDefault()
     let incorrectSelections = JSON.parse(localStorage.getItem('incorrect'))
     this.setState({
-      incorrectCards: incorrectSelections
+      cardCount: incorrectSelections.length, 
+      incorrectCards: incorrectSelections, 
+      selectedIncorrectCards: true
     })
+    // console.log(incorrectSelections)
   }
 
   startNewSession = (event) => {
@@ -92,7 +96,7 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <div className="review-container"> 
-              <button>Review Incorrect Answers</button>
+              <button onClick={this.reviewIncorrectCards}>Review Incorrect Answers</button>
               <button onClick={this.startNewSession}className="incorrect-button" className="new-session-button">Start New Session</button>
           </div>
         </div>
