@@ -46,8 +46,11 @@ class App extends Component {
   }
 
   updateLocalStorage = (cards) => {
-    let userQuestions = []
-    userQuestions.push(cards) 
+    let userQuestions = JSON.parse(localStorage.getItem('incorrect'))
+    if (!userQuestions) {
+      userQuestions = []
+    }
+    userQuestions.push(cards)
     localStorage.setItem('incorrect', JSON.stringify(userQuestions))
   }
   
