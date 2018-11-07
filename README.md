@@ -1,44 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Javascripty
 
-## Available Scripts
+### Why I Built This: 
 
-In the project directory, you can run:
+I built this application to help those whore are new to the Javascript programming language better understand the foundational concepts of the language. The structure of the application helps users improve their vocublary which will help them improve their ability to speak to different concepts that encapsulate Javascript. 
 
-### `npm start`
+### How To Study: 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In your terminal enter the following commands: 
+`git clone https://github.com/Dhanciles/javascripty`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+`cd javascripty`
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install node-sass`
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Background: 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+This project was built during my time at Turing School of Software and Design, and this is my third project using React as my framework. Working on this project allowed me to solidify my knowledge in the core tools that React gives you, which allowed me to build a fast and interactive app that truly mimics the action of one using flash cards to study a subject. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Goals for This Project: 
+- Utilize localStorage in a React app.
+- Stick to Reacts guidelines of writing modular code. 
+- Implement a interface that makes the user's experience enjoyable.
+- Give new Javascript programmers a resource to help them get over the learning curve, whether in a boot camp, college studying computer science ot learning on their own. 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Extensions 
+- Add more data to my dataset, that would allow my user to filter through different concepts and narrow down the flash cards they would like to study. 
+- Recently I discovered how to create a 3d card stack using CSS. During an intermission I plan on adding this to add more depth to the cards, so it really feels like your are moving through a deck of flash cards. 
