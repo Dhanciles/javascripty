@@ -52,18 +52,22 @@ class App extends Component {
     })
   }
 
+  // addToLocalStorage = () => {
+
+  // }
+
   updateLocalStorage = (name, cards) => {
-    console.log('name', name)
-    console.log('cards', cards)
     if (name) {
-      localStorage.setItem('name', JSON.stringify(name))
+      localStorage.setItem( 'name', JSON.stringify([]))
     } else if (cards) {
-      localStorage.setItem('incorrect_cards', JSON.stringify(cards))
+      let userQuestions = localStorage.getItem(JSON.parse(this.state.userName))
+      userQuestions.push(cards) 
+      localStorage.setItem(JSON.stringify(userQuestions), this.state.userName)
     }
   }
 
   saveIncorrectCards = (obj) => {
-    this.updateLocalStorage(obj)
+    this.updateLocalStorage(undefined, obj)
   }
 
 

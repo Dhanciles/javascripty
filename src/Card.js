@@ -18,7 +18,7 @@ class Card extends Component {
         answeredCorrectly: true
       })
     } else {
-      this.props.getIncorrectCards({id, question, category, answers, correctAnswer})
+      this.props.saveIncorrectCards({id, question, category, answers, correctAnswer})
     }
     this.props.updateCard()
   } 
