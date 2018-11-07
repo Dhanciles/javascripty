@@ -6,7 +6,6 @@ class App extends Component {
   constructor() {
     super(); 
     this.state = {
-      userName: '',
       startReview: false,
       data: [], 
       cardCount: 0, 
@@ -29,13 +28,7 @@ class App extends Component {
     .catch(error => console.log(error))
   }; 
 
-  handleChange = event => {
-    this.setState({
-      userName: event.target.value
-    }, () => this.updateLocalStorage(this.state.userName))
-  }; 
-
-  startSession = event => {
+  startSession = (event) => {
     event.preventDefault(); 
     this.setState({
       startReview: true
@@ -52,23 +45,19 @@ class App extends Component {
     })
   }
 
-  updateLocalStorage = (name, cards) => {
-    if (name) {
-      localStorage.setItem( 'name', JSON.stringify([]))
-    } else if (cards) {
-      let userQuestions = localStorage.getItem(JSON.parse(this.state.userName))
-      userQuestions.push(cards) 
-      localStorage.setItem(JSON.stringify(userQuestions), this.state.userName)
-    }
+  updateLocalStorage = (cards) => {
+    let userQuestions = []
+    userQuestions.push(cards) 
+    localStorage.setItem('incorrect', JSON.stringify(userQuestions))
   }
+  
 
   saveIncorrectCards = (obj) => {
-    this.updateLocalStorage(undefined, obj)
+    this.updateLocalStorage(obj)
   }
 
 
   render = () => {
-
     if (!this.state.startReview) {
       return (
         <div className="App">
@@ -91,7 +80,6 @@ class App extends Component {
         </div>
       );
     }
-
   }; 
 }
 
