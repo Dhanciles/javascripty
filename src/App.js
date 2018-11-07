@@ -96,8 +96,8 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <div className="review-container"> 
-              <button onClick={this.reviewIncorrectCards}>Review Incorrect Answers</button>
-              <button onClick={this.startNewSession}className="incorrect-button" className="new-session-button">Start New Session</button>
+              <button className="incorrect-button"onClick={this.reviewIncorrectCards}>Review Incorrect Answers</button>
+              <button onClick={this.startNewSession} className="new-session-button">Start New Session</button>
           </div>
         </div>
       ); 

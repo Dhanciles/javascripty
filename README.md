@@ -7,6 +7,7 @@ I built this application to help those whore are new to the Javascript programmi
 ### How To Study: 
 
 In your terminal enter the following commands: 
+
 `git clone https://github.com/Dhanciles/javascripty`
 
 `cd javascripty`
