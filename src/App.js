@@ -61,7 +61,9 @@ class App extends Component {
   }
 
   startNewSession = () => {
-
+    this.setState({
+      cardCount: 0
+    })
   }
 
 
@@ -82,8 +84,8 @@ class App extends Component {
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
           <div className="review-container"> 
-              <button className="incorrect-button">Review Incorrect Answers</button>
-              <button className="new-session-button">Start New Session</button>
+              <button>Review Incorrect Answers</button>
+              <button onClick={this.startNewSession}className="incorrect-button" className="new-session-button">Start New Session</button>
           </div>
         </div>
       ); 
