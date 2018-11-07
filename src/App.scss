@@ -1,5 +1,11 @@
 @import "variables"; 
 
+* {
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+}
+
 .App {
   text-align: center;
   background-color: $primary-color; 
@@ -8,11 +14,13 @@
 
 button {
   font-family: $text-font; 
-  font-size: 1rem; 
+  font-size: 1.5rem; 
   font-weight: 600; 
   border: 2px $secondary-color; 
-  margin-top: 20px; 
-  height: 50px; 
+  margin-top: 20px;
+  padding: 10px;  
+  height: 100px; 
+  width: 200px; 
   cursor: pointer;
     &:hover {
     background-color: $button-hover; 
@@ -22,9 +30,16 @@ button {
 
 .app-title {
   font-family: $brand-font; 
-  font-size: 5rem;
+  font-size: 6rem;
   color: $not-white; 
   margin: 0; 
+}
+
+h3 {
+ font-family: $text-font;  
+ font-weight: 600; 
+ font-size: 2rem; 
+ color: $not-white; 
 }
 
 .count-container {

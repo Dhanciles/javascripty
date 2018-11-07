@@ -85,6 +85,7 @@ class App extends Component {
         <div className="App">
           <article className="app-title-container"> 
             <h1 className="app-title">JAVASCRIPTY</h1>
+            <h3>Improve Your Technical Javascript Vocabulary</h3>
           </article>
            <button className="start-review-button" onClick={this.startSession}>Start Reviewing</button>
         </div>
@@ -107,9 +108,6 @@ class App extends Component {
           <header className="app-header">
             <h1 className="app-title">JAVASCRIPTY</h1>
           </header>
-          <article className="count-container">
-            {/* <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3> */}
-          </article>
           <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards} incorrectCards={this.state.incorrectCards} selectedIncorrectCards={this.state.selectedIncorrectCards}/>
         </div>
       );
