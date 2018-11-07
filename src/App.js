@@ -68,7 +68,6 @@ class App extends Component {
       incorrectCards: incorrectSelections, 
       selectedIncorrectCards: true
     })
-    // console.log(incorrectSelections)
   }
 
   startNewSession = (event) => {
@@ -111,7 +110,7 @@ class App extends Component {
           <article className="count-container">
             {/* <h3 className="card-count">{this.state.cardCount}/30 Cards Answered</h3> */}
           </article>
-          <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards}/>
+          <CardContainer data={this.state.data} count={this.state.cardCount} updateCard={this.updateCard} saveIncorrectCards={this.saveIncorrectCards} incorrectCards={this.state.incorrectCards} selectedIncorrectCards={this.state.selectedIncorrectCards}/>
         </div>
       );
 
